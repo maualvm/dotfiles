@@ -78,8 +78,8 @@ wezterm.on(
     local foreground = '#cdd6f4'      -- light text
 
     if tab.is_active then
-      background = '#cba6f7' -- purple
-      foreground = '#11111b' -- dark background (text)
+      background = '#cba6f7' -- purple background
+      foreground = '#11111b' -- dark text
     end
 
     local edge_foreground = background
