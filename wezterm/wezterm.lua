@@ -13,8 +13,8 @@ end
 config.color_scheme = 'Catppuccin Mocha'
 config.font = wezterm.font('JetBrains Mono NL')
 config.font_size = 14.00
-config.initial_cols = 140
-config.initial_rows = 40
+config.initial_cols = 160
+config.initial_rows = 45
 
 config.window_padding = {
   left = '0px',
