@@ -10,7 +10,6 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
-
 config.color_scheme = 'Catppuccin Mocha'
 config.font = wezterm.font('JetBrains Mono NL')
 config.font_size = 14.00
