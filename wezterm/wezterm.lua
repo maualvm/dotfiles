@@ -122,18 +122,26 @@ wezterm.on(
     local edge_suffix = wezterm.nerdfonts.ple_right_half_circle_thick
     local crust = '#11111b'
     local mauve = '#cba6f7'
-    local date = ' ' .. wezterm.strftime '%a%e %b %I:%M:%S %P '
+    local base = '#1e1e2e'
+    local text = '#cdd6f4'
+    local date = ' ' .. wezterm.strftime '%a%e %b '
+    local time = ' ' .. wezterm.strftime '%I:%M:%S %P '
 
     window:set_right_status(
       wezterm.format({
         { Background = { Color = crust } },
-        { Foreground = { Color = mauve } },
+        { Foreground = { Color = base } },
         { Text = edge_prefix },
-        { Background = { Color = mauve } },
-        { Foreground = { Color = crust } },
+        { Background = { Color = base } },
+        { Foreground = { Color = text } },
         { Attribute = { Italic = true } },
         { Attribute = { Intensity = 'Bold' } },
         { Text = date },
+
+        { Background = { Color = mauve } },
+        { Foreground = { Color = base } },
+        { Text = time },
+
         { Background = { Color = crust } },
         { Foreground = { Color = mauve } },
         { Text = edge_suffix }
