@@ -34,7 +34,6 @@ config.keys = {
     mods = 'OPT',
     action = wezterm.action { SendString = "\x1bf" }
   }, -- Make Option-Right equivalent to Alt-f; forward-word
-
   {
     key = 'LeftArrow',
     mods = 'CMD',
@@ -75,15 +74,15 @@ wezterm.on(
   'format-tab-title',
   function(tab, tabs, panes, window_config, hover, max_width)
     local title = '  ' .. wezterm.truncate_right(tab.active_pane.title, max_width - 2) .. '  '
-    local edge_background = '#11111b' -- darkest background
-    local background = '#1e1e2e'      -- dark background (grey)
-    local foreground = '#cdd6f4'      -- light text
+    local edge_background = '#11111b' -- Crust
+    local background = '#313244'      -- Surface1
+    local foreground = '#cdd6f4'      -- Text
     local edge_prefix = ''
     local edge_suffix = ''
 
     if tab.is_active then
-      background = '#cba6f7' -- purple background
-      foreground = '#11111b' -- dark text
+      background = '#cba6f7' -- Mauve
+      foreground = '#11111b' -- Crust
     end
 
     local edge_foreground = background -- either purple or grey
@@ -102,7 +101,7 @@ wezterm.on(
       { Background = { Color = edge_background } },
       { Foreground = { Color = edge_foreground } },
       { Text = edge_prefix },
-      { Attribute = { Italic = true } },
+      { Attribute = { Italic = false } },
       { Background = { Color = background } },
       { Foreground = { Color = foreground } },
       { Attribute = { Intensity = 'Bold' } },
@@ -122,7 +121,7 @@ wezterm.on(
     local edge_suffix = wezterm.nerdfonts.ple_right_half_circle_thick
     local crust = '#11111b'
     local mauve = '#cba6f7'
-    local base = '#1e1e2e'
+    local surface_1 = '#313244'
     local text = '#cdd6f4'
     local date = ' ' .. wezterm.strftime '%a%e %b  '
     local time = '  ' .. wezterm.strftime '%I:%M:%S %P '
@@ -130,15 +129,15 @@ wezterm.on(
     window:set_right_status(
       wezterm.format({
         { Background = { Color = crust } },
-        { Foreground = { Color = base } },
+        { Foreground = { Color = surface_1 } },
         { Text = edge_prefix },
-        { Background = { Color = base } },
+        { Background = { Color = surface_1 } },
         { Foreground = { Color = text } },
-        { Attribute = { Italic = true } },
+        { Attribute = { Italic = false } },
         { Attribute = { Intensity = 'Bold' } },
         { Text = date },
         { Background = { Color = mauve } },
-        { Foreground = { Color = base } },
+        { Foreground = { Color = surface_1 } },
         { Text = time },
         { Background = { Color = crust } },
         { Foreground = { Color = mauve } },
