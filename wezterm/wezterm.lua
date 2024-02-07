@@ -137,11 +137,9 @@ wezterm.on(
         { Attribute = { Italic = true } },
         { Attribute = { Intensity = 'Bold' } },
         { Text = date },
-
         { Background = { Color = mauve } },
         { Foreground = { Color = base } },
         { Text = time },
-
         { Background = { Color = crust } },
         { Foreground = { Color = mauve } },
         { Text = edge_suffix }
