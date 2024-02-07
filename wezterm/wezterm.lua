@@ -73,32 +73,42 @@ config.show_new_tab_button_in_tab_bar = false
 wezterm.on(
   'format-tab-title',
   function(tab, tabs, panes, window_config, hover, max_width)
+    local title = '  ' .. wezterm.truncate_right(tab.active_pane.title, max_width - 2) .. '  '
     local edge_background = '#11111b' -- darkest background
-    local background = '#1e1e2e'      -- dark background
+    local background = '#1e1e2e'      -- dark background (grey)
     local foreground = '#cdd6f4'      -- light text
+    local edge_prefix = ''
+    local edge_suffix = ''
 
     if tab.is_active then
       background = '#cba6f7' -- purple background
       foreground = '#11111b' -- dark text
     end
 
-    local edge_foreground = background
-    local title = tab.active_pane.title
+    local edge_foreground = background -- either purple or grey
 
-    -- ensure that the titles fit in the available space,
-    -- and that we have room for the edges.
-    title = wezterm.truncate_right(title, max_width - 2)
+    if tab.tab_index == 0 then
+      edge_prefix = wezterm.nerdfonts.ple_left_half_circle_thick
+      title = string.sub(title, 2) -- remove leading space
+    end
+
+    if tab.tab_index == tabs[#tabs].tab_index then
+      edge_suffix = wezterm.nerdfonts.ple_right_half_circle_thick
+      title = string.sub(title, 1, -2) -- remove trailing space
+    end
 
     return {
       { Background = { Color = edge_background } },
       { Foreground = { Color = edge_foreground } },
+      { Text = edge_prefix },
       { Attribute = { Italic = true } },
       { Background = { Color = background } },
       { Foreground = { Color = foreground } },
       { Attribute = { Intensity = 'Bold' } },
-      { Text = '  ' .. title .. '  ' },
+      { Text = title },
       { Background = { Color = edge_background } },
       { Foreground = { Color = edge_foreground } },
+      { Text = edge_suffix },
     }
   end
 )
