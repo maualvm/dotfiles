@@ -124,8 +124,8 @@ wezterm.on(
     local mauve = '#cba6f7'
     local base = '#1e1e2e'
     local text = '#cdd6f4'
-    local date = ' ' .. wezterm.strftime '%a%e %b '
-    local time = ' ' .. wezterm.strftime '%I:%M:%S %P '
+    local date = ' ' .. wezterm.strftime '%a%e %b  '
+    local time = '  ' .. wezterm.strftime '%I:%M:%S %P '
 
     window:set_right_status(
       wezterm.format({
