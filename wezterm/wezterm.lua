@@ -70,6 +70,7 @@ config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 config.show_new_tab_button_in_tab_bar = false
 
+-- Tab title configuration
 wezterm.on(
   'format-tab-title',
   function(tab, tabs, panes, window_config, hover, max_width)
@@ -110,6 +111,34 @@ wezterm.on(
       { Foreground = { Color = edge_foreground } },
       { Text = edge_suffix },
     }
+  end
+)
+
+-- Status bar configuration
+wezterm.on(
+  'update-status',
+  function(window, pane)
+    local edge_prefix = wezterm.nerdfonts.ple_left_half_circle_thick
+    local edge_suffix = wezterm.nerdfonts.ple_right_half_circle_thick
+    local crust = '#11111b'
+    local mauve = '#cba6f7'
+    local date = ' ' .. wezterm.strftime '%a%e %b %I:%M:%S %P '
+
+    window:set_right_status(
+      wezterm.format({
+        { Background = { Color = crust } },
+        { Foreground = { Color = mauve } },
+        { Text = edge_prefix },
+        { Background = { Color = mauve } },
+        { Foreground = { Color = crust } },
+        { Attribute = { Italic = true } },
+        { Attribute = { Intensity = 'Bold' } },
+        { Text = date },
+        { Background = { Color = crust } },
+        { Foreground = { Color = mauve } },
+        { Text = edge_suffix }
+      })
+    )
   end
 )
 
