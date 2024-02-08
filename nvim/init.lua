@@ -1,7 +1,7 @@
 -- Set <space> as leader key
 -- NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = " "      -- Set leader key to space
-vim.g.maplocalleader = " " -- Set local leader key to comma
+vim.g.maplocalleader = " " -- Set local leader key to space (for buffer-local mappings)
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
