@@ -124,6 +124,7 @@ wezterm.on(
     local surface_1 = '#313244'
     local text = '#cdd6f4'
     local date = ' ' .. wezterm.strftime '%a%e %b  '
+    date = date:gsub('(%d+)', ' %1')
     local time = '  ' .. wezterm.strftime '%I:%M:%S %P '
 
     window:set_right_status(
