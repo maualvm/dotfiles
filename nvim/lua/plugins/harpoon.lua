@@ -26,6 +26,7 @@ local keys = {
   { "<leader>a",  function() require("harpoon"):list():append() end, desc = "Append file to harpoon", },
   { "<c-h><c-u>", function() require("harpoon"):list():next() end,   desc = "Go to next item in list" },
   { "<c-h><c-d>", function() require("harpoon"):list():prev() end,   desc = "Go to previous item in list" },
+  { "<leader>da", function() require("harpoon"):list():clear() end,  desc = "Delete all items from list" },
 }
 
 for i = 1, 9 do
