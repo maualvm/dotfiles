@@ -14,10 +14,14 @@ return {
             },
           },
         },
-      }                                        -- Lua language server
-      require("lspconfig").solargraph.setup {} -- Ruby language server
-      require("lspconfig").gopls.setup {}      -- Go language server
-      require("lspconfig").tsserver.setup {}   -- TypeScript language server
+      }                                                  -- Lua language server
+      require("lspconfig").solargraph.setup {}           -- Ruby language server
+      require("lspconfig").gopls.setup {}                -- Go language server
+      require("lspconfig").tsserver.setup {}             -- TypeScript language server
+      require("lspconfig").htmx.setup {}                 -- HTMX language server
+      require("lspconfig").emmet_language_server.setup { -- Emmet language server
+        filetypes = { "html", "css", "javascript", "javascriptreact", "typescriptreact", "eruby" },
+      }
 
       vim.api.nvim_create_autocmd("BufWritePre", {
         pattern = "*",
