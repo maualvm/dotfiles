@@ -123,39 +123,4 @@ wezterm.on(
   end
 )
 
--- Status bar configuration
-wezterm.on(
-  'update-status',
-  function(window, pane)
-    local edge_prefix = wezterm.nerdfonts.ple_left_half_circle_thick
-    local edge_suffix = wezterm.nerdfonts.ple_right_half_circle_thick
-    local crust = '#11111b'
-    local mauve = '#cba6f7'
-    local surface_1 = '#313244'
-    local text = '#cdd6f4'
-    local date = ' ' .. wezterm.strftime '%a%e %b  '
-    date = date:gsub('(%d+)', ' %1')
-    local time = '  ' .. wezterm.strftime '%I:%M:%S %P '
-
-    window:set_right_status(
-      wezterm.format({
-        { Background = { Color = crust } },
-        { Foreground = { Color = surface_1 } },
-        { Text = edge_prefix },
-        { Background = { Color = surface_1 } },
-        { Foreground = { Color = text } },
-        { Attribute = { Italic = false } },
-        { Attribute = { Intensity = 'Bold' } },
-        { Text = date },
-        { Background = { Color = mauve } },
-        { Foreground = { Color = surface_1 } },
-        { Text = time },
-        { Background = { Color = crust } },
-        { Foreground = { Color = mauve } },
-        { Text = edge_suffix }
-      })
-    )
-  end
-)
-
 return config
