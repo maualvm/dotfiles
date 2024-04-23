@@ -3,6 +3,7 @@ vim.g.loaded_netrwPlugin = 1  -- disable netrw plugin
 vim.opt.termguicolors = true  -- enable 24-bit RGB colors
 vim.opt.number = true         -- Show line numbers
 vim.opt.relativenumber = true -- Show relative line numbers
+vim.opt.cursorline = true     -- Highlight the current line
 vim.opt.autoindent = true     -- Enable autoindenting
 vim.opt.smartindent = true    -- Enable smart indenting
 
