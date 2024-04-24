@@ -22,7 +22,6 @@ config.colors = {
   },
 }
 
-config.window_decorations = 'RESIZE'
 config.window_padding = {
   left = '0px',
   right = '0px',
@@ -70,11 +69,6 @@ config.keys = {
     action = wezterm.action.CloseCurrentPane { confirm = true },
   },
   {
-    key = 'r',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.RotatePanes 'Clockwise',
-  },
-  {
     key = 'LeftArrow',
     mods = 'CTRL|SHIFT',
     action = wezterm.action.MoveTabRelative(-1),
@@ -84,6 +78,26 @@ config.keys = {
     mods = 'CTRL|SHIFT',
     action = wezterm.action.MoveTabRelative(1),
   },
+  {
+    key = ',',
+    mods = 'CMD',
+    action = wezterm.action_callback(function(_, pane)
+      local tab = pane:tab()
+      local panes = tab:panes_with_info()
+      if #panes == 1 then
+        pane:split({
+          direction = "Bottom",
+          size = 0.333
+        })
+      elseif not panes[1].is_zoomed then
+        panes[1].pane:activate()
+        tab:set_zoomed(true)
+      elseif panes[1].is_zoomed then
+        tab:set_zoomed(false)
+        panes[2].pane:activate()
+      end
+    end),
+  } -- Make Cmd + , toggle a split terminal at the bottom
 }
 
 -- Tab bar configuration
