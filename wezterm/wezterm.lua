@@ -89,7 +89,7 @@ config.show_new_tab_button_in_tab_bar = false
 wezterm.on(
   'format-tab-title',
   function(tab, tabs, panes, window_config, hover, max_width)
-    local title = '  ' .. wezterm.truncate_right(tab.active_pane.title, max_width - 2) .. '  '
+    local title = ' ' .. wezterm.truncate_right(tab.tab_index + 1, max_width - 2) .. ' '
     local edge_background = '#11111b' -- Crust
     local background = '#313244'      -- Surface1
     local foreground = '#cdd6f4'      -- Text
@@ -97,11 +97,11 @@ wezterm.on(
     local edge_suffix = ''
 
     if tab.is_active then
-      background = '#cba6f7' -- Mauve
+      background = '#89b4fa' -- Blue
       foreground = '#11111b' -- Crust
     end
 
-    local edge_foreground = background -- either purple or grey
+    local edge_foreground = background -- either Blue or Surface1
 
     if tab.tab_index == 0 then
       edge_prefix = wezterm.nerdfonts.ple_left_half_circle_thick
