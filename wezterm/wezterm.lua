@@ -39,12 +39,17 @@ config.keys = {
     key = 'LeftArrow',
     mods = 'CMD',
     action = wezterm.action { SendString = "\x1bOH" },
-  }, -- Make Cmd-Left equivalent to delete to beginning of line
+  }, -- Make Cmd-Left equivalent to go to beginning of line
   {
     key = 'RightArrow',
     mods = 'CMD',
     action = wezterm.action { SendString = "\x1bOF" },
-  }, -- Make Cmd-Right equivalent to delete to end of line
+  }, -- Make Cmd-Right equivalent to go to end of line
+  {
+    key = 'Backspace',
+    mods = 'CMD',
+    action = wezterm.action.SendKey({ mods = 'CTRL', key = 'u' }),
+  }, -- Make Cmd-Backspace equivalent to delete to beginning of line
   {
     key = 'k',
     mods = 'CMD',
