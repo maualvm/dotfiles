@@ -16,6 +16,12 @@ config.font_size = 14.00
 config.initial_cols = 160
 config.initial_rows = 45
 
+config.colors = {
+  tab_bar = {
+    background = "rgba(0,0,0,0)"
+  },
+}
+
 config.window_decorations = 'RESIZE'
 config.window_padding = {
   left = '0px',
@@ -90,9 +96,9 @@ wezterm.on(
   'format-tab-title',
   function(tab, tabs, panes, window_config, hover, max_width)
     local title = ' ' .. wezterm.truncate_right(tab.tab_index + 1, max_width - 2) .. ' '
-    local edge_background = '#11111b' -- Crust
-    local background = '#313244'      -- Surface1
-    local foreground = '#cdd6f4'      -- Text
+    local edge_background = 'rgba(0,0,0,0)' -- Crust
+    local background = '#313244'            -- Surface1
+    local foreground = '#cdd6f4'            -- Text
     local edge_prefix = ''
     local edge_suffix = ''
 
