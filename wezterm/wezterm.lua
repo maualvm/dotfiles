@@ -22,6 +22,7 @@ config.colors = {
   },
 }
 
+config.window_decorations = "RESIZE"
 config.window_padding = {
   left = '0px',
   right = '0px',
