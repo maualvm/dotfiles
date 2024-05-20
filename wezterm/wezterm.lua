@@ -24,10 +24,10 @@ config.colors = {
 
 config.window_decorations = "RESIZE"
 config.window_padding = {
-  left = '0px',
-  right = '0px',
-  top = '0px',
-  bottom = '0px',
+  left = '0cell',
+  right = '0cell',
+  top = '0.5cell',
+  bottom = '0.5cell',
 }
 
 config.keys = {
