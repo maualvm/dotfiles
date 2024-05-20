@@ -5,6 +5,6 @@ return {
   opts = {
     indent = {},
     whitespace = {},
-    scope = { enabled = false },
+    scope = { enabled = true },
   }
 }
