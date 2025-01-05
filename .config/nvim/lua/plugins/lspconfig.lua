@@ -20,7 +20,7 @@ return {
         debounce_text_changes = 150,
       }                                                  -- Ruby language server
       require("lspconfig").gopls.setup {}                -- Go language server
-      require("lspconfig").tsserver.setup {}             -- TypeScript language server
+      require("lspconfig").ts_ls.setup {}                -- TypeScript language server
       require("lspconfig").htmx.setup {}                 -- HTMX language server
       require("lspconfig").emmet_language_server.setup { -- Emmet language server
         filetypes = { "html", "css", "javascript", "javascriptreact", "typescriptreact", "eruby" },

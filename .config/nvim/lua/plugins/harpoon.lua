@@ -23,17 +23,17 @@ local keys = {
     end,
     desc = "Toggle harpoon quick menu",
   },
-  { "<leader>a",  function() require("harpoon"):list():append() end, desc = "Append file to harpoon", },
-  { "<c-h><c-u>", function() require("harpoon"):list():next() end,   desc = "Go to next item in list" },
-  { "<c-h><c-d>", function() require("harpoon"):list():prev() end,   desc = "Go to previous item in list" },
-  { "<leader>da", function() require("harpoon"):list():clear() end,  desc = "Delete all items from list" },
+  { "<leader>a",  function() require("harpoon"):list():add() end,   desc = "Add file to harpoon", },
+  { "<c-h><c-u>", function() require("harpoon"):list():next() end,  desc = "Go to next item in list" },
+  { "<c-h><c-d>", function() require("harpoon"):list():prev() end,  desc = "Go to previous item in list" },
+  { "<leader>da", function() require("harpoon"):list():clear() end, desc = "Delete all items from list" },
 }
 
 for i = 1, 9 do
   table.insert(keys,
     { "<leader>" .. i, function() require("harpoon"):list():select(i) end, desc = "Set file to item " .. i })
   table.insert(keys,
-    { "<leader>d" .. i, function() require("harpoon"):list():removeAt(i) end, desc = "Delete item " .. i .. " from list" })
+    { "<leader>d" .. i, function() require("harpoon"):list():remove_at(i) end, desc = "Delete item " .. i .. " from list" })
 end
 
 
