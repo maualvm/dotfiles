@@ -9,6 +9,7 @@ function module.apply_to_config(config)
   config.initial_cols = 160
   config.initial_rows = 45
 
+  config.window_decorations = "RESIZE"
   config.window_padding = {
     left = '0cell',
     right = '0cell',
