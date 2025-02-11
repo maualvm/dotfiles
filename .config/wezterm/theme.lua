@@ -16,6 +16,9 @@ function module.apply_to_config(config)
     top = '0.5cell',
     bottom = '0.5cell',
   }
+
+  config.window_background_opacity = 0.50
+  config.macos_window_background_blur = 20
 end
 
 return module
