@@ -5,16 +5,20 @@ PLUGIN_DIR="$CONFIG_DIR/plugins"
 ITEM_DIR="$CONFIG_DIR/items"
 
 # Bar Appearance
-sketchybar --bar position=top \
-                 height=30 \
-                 blur_radius=30 \
-                 y_offset=6 \
-                 margin=10 \
-                 padding_left=2 \
-                 padding_right=2 \
-                 corner_radius=10 \
-                 color=$TRANSPARENT \
-                 shadow=off \
+bar=(
+  position=top
+  height=30
+  blur_radius=30
+  y_offset=6
+  margin=10
+  padding_left=2
+  padding_right=2
+  corner_radius=10
+  color=$TRANSPARENT
+  shadow=off
+)
+
+sketchybar --bar "${bar[@]}"
 
 # Changing Defaults 
 default=(

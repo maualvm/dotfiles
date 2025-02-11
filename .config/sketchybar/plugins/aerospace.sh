@@ -12,6 +12,9 @@ else
     LABEL_COLOR=$WHITE
 fi
 
-sketchybar --set $NAME background.color=$BACKGROUND_COLOR \
-                       icon.color=$ICON_COLOR \
-                       label.color=$LABEL_COLOR
+aerospace_item=(
+  background.color=$BACKGROUND_COLOR
+  icon.color=$ICON_COLOR
+  label.color=$LABEL_COLOR
+)
+sketchybar --set $NAME "${aerospace_item[@]}"
