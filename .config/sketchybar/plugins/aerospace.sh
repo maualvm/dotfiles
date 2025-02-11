@@ -3,13 +3,15 @@
 source "$CONFIG_DIR/colors.sh"
 
 if [ "$1" = "$FOCUSED_WORKSPACE" ]; then
-    sketchybar --set $NAME background.drawing=on \
-                           background.border_width=0 \
-                           background.color=$BLUE \
-                           icon.color=$BLACK \
-                           label.color=$BLACK
+    BACKGROUND_COLOR=$BLUE
+    ICON_COLOR=$BLACK
+    LABEL_COLOR=$BLACK
 else
-    sketchybar --set $NAME background.drawing=off \
-                           icon.color=$WHITE \
-                           label.color=$WHITE
+    BACKGROUND_COLOR=$BACKGROUND_2
+    ICON_COLOR=$WHITE
+    LABEL_COLOR=$WHITE
 fi
+
+sketchybar --set $NAME background.color=$BACKGROUND_COLOR \
+                       icon.color=$ICON_COLOR \
+                       label.color=$LABEL_COLOR
