@@ -6,9 +6,9 @@ ITEM_DIR="$CONFIG_DIR/items"
 
 # Bar Appearance
 sketchybar --bar position=top \
-                 height=40 \
+                 height=30 \
                  blur_radius=30 \
-                 y_offset=10 \
+                 y_offset=6 \
                  margin=10 \
                  padding_left=2 \
                  padding_right=2 \
@@ -18,25 +18,28 @@ sketchybar --bar position=top \
 
 # Changing Defaults 
 default=(
-  padding_left=5
-  padding_right=5
-  icon.font="SF Pro:Semibold:15.0"
-  icon.color=$WHITE
+  padding_left=4
+  padding_right=4
   icon.padding_left=4
   icon.padding_right=4
-  label.font="SF Pro:Semibold:15.0"
-  label.color=$WHITE
+  icon.font="SF Pro:Semibold:13.0"
+  icon.color=$WHITE
   label.padding_left=4
   label.padding_right=4
-  background.height=25
+  label.font="SF Pro:Semibold:13.0"
+  label.color=$WHITE
+  background.height=20
+  background.padding_left=2
+  background.padding_right=2
   background.corner_radius=6
+  background.border_width=1
+  background.border_color=$WHITE
   background.color=$BACKGROUND_2
 )
 sketchybar --default "${default[@]}"
 
 # Left items
-source $ITEM_DIR/spaces.sh
-source $ITEM_DIR/front_app.sh
+source $ITEM_DIR/aerospace.sh
 
 # Right Items
 source $ITEM_DIR/calendar.sh
