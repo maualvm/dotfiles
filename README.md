@@ -59,7 +59,7 @@ brew bundle
 stow .
 ```
 
-9. Install the [Mac Mouse Fix](https://macmousefix.com/en/) and [Better Display](https://github.com/waydabber/BetterDisplay) by following the instructions.
+9. Install [Mac Mouse Fix](https://macmousefix.com/en/) and [Better Display](https://github.com/waydabber/BetterDisplay) by following the instructions.
 
 You're done!
 
