@@ -8,6 +8,6 @@ return {
   },
   dependencies = { "nvim-tree/nvim-web-devicons" },
   keys = {
-    { "<leader>o", "<CMD>Oil<CR>", silent = true, desc = "Open file browser" },
+    { "-", ":Oil<CR>", silent = true, desc = "Open parent directory in current window" },
   }
 }
