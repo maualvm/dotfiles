@@ -5,14 +5,16 @@ return {
   opts = {
     transparent_background = true,
     integrations = {
+      fzf = true,
       cmp = true,
       gitsigns = true,
+      treesitter = true,
+      mason = true,
       indent_blankline = {
         enabled = true,
         scope_color = "",
         colored_indent_levels = true,
       },
-      mason = true,
       native_lsp = {
         enabled = true,
         virtual_text = {
@@ -31,7 +33,6 @@ return {
           background = true,
         },
       },
-      treesitter = true,
     }
   }
 }
