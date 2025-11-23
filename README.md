@@ -71,5 +71,6 @@ You're done!
 ### Plugins
 - File browser: oil.nvim
 - File picker: fzf-lua
+- Statusline: lualine.nvim
 - Git: fugitive.vim
 - Autocomplete: nvim-cmp + Github Copilot
