@@ -56,4 +56,3 @@ You're done!
 - Terminal: Wezterm
 - Prompt: Oh-my-posh
 - Font: Jetbrains Mono NL
-
