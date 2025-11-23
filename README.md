@@ -32,6 +32,7 @@ brew install git
 git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 git config --global core.editor nvim
+git config --global init.defaultBranch main
 ```
 
 4. Generate and add a new SSH key to your Github account using [this handy guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
