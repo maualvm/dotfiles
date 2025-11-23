@@ -6,6 +6,7 @@ vim.opt.relativenumber = true -- Show relative line numbers
 vim.opt.cursorline = true     -- Highlight the current line
 vim.opt.autoindent = true     -- Enable autoindenting
 vim.opt.smartindent = true    -- Enable smart indenting
+vim.opt.winborder = "rounded" -- Use rounded borders for floating windows
 
 -- Set tab settings
 vim.opt.tabstop = 2         -- Number of spaces that a <Tab> in the file counts for
