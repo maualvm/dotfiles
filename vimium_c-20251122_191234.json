@@ -1,0 +1,50 @@
+{
+	"name": "Vimium C",
+	"@time": "11/22/2025, 7:12:34 PM",
+	"time": 1763860354153,
+	"environment": {
+		"extension": "2.12.2",
+		"platform": "mac",
+		"chromium": 142
+	},
+	"exclusionRules": [
+		{
+			"passKeys": "",
+			"pattern": ":https://mail.google.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": "^https?://localhost:10350/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://www.nytimes.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://wordleunlimited.org/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://vim-adventures.com/"
+		}
+	],
+	"keyLayout": 2,
+	"keyupTime": 50,
+	"searchEngines": [
+		"g|go|gg|google|Google: https://www.google.com/search?q=%s \\",
+		"  www.google.com re=/^(?:\\.[a-z]{2,4})?\\/search\\b.*?[#&?]q=([^#&]*)/i \\",
+		"  blank=https://www.google.com/ Google",
+		"",
+		"\\:i: vimium://sed/s/^//,lower\\ $S re= Lower case",
+		"v.m|math: vimium://math\\ $S re= Calculate",
+		"v.p: vimium://parse\\ $S re= Redo Search",
+		"gh|github: https://github.com/search?q=$s \\",
+		"  blank=https://github.com/ GitHub Repo",
+		"ge|gitee: https://search.gitee.com/?type=repository&q=$s \\",
+		"  blank=https://gitee.com/ Gitee 仓库",
+		"js\\:|Js: javascript:\\ $S; JavaScript",
+		""
+	],
+	"vimSync": true
+}
