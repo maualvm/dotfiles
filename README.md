@@ -1,5 +1,13 @@
 # My Dotfiles
 
+## Tools used
+
+- Text editor: Neovim
+- Window manager: Aerospace
+- Terminal: Wezterm
+- Prompt: Oh-my-posh
+- Font: Jetbrains Mono NL
+
 ## Installation
 
 1. Install [Homebrew](https://brew.sh/) by copying the command below and following the instructions.
@@ -48,11 +56,13 @@ stow .
 
 You're done!
 
+## Neovim
 
-## Tools used
+- Plugin manager: lazy.nvim
+- Colorscheme: catppuccin
 
-- Text editor: Neovim
-- Window manager: Aerospace
-- Terminal: Wezterm
-- Prompt: Oh-my-posh
-- Font: Jetbrains Mono NL
+Plugins:
+- File browser: oil.nvim
+- File picker: fzf-lua
+- Git: fugitive.vim
+- Autocomplete: nvim-cmp + Github Copilot
