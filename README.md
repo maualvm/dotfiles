@@ -27,15 +27,21 @@ If everything went well, the above command should output `Your system is ready t
 brew install git
 ```
 
-3. Configure git by following the [First-Time Git Setup guide](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
-4. Generate and add a new SSH key to your Github account using [this handy guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+3. Configure git by following the [First-Time Git Setup guide](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup):
+```sh
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+git config --global core.editor nvim
+```
+
+4. Generate and add a new SSH key to your Github account using [this handy guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 5. Clone this repository *in your home directory*:
 ```sh
 # inside ~
 git clone git@github.com:maualvm/dotfiles.git
 ```
 
-6. `cd` into the cloned repository.
+6. `cd` into the cloned repository:
 ```sh
 # inside ~
 cd dotfiles
@@ -61,7 +67,7 @@ You're done!
 - Plugin manager: lazy.nvim
 - Colorscheme: catppuccin
 
-Plugins:
+### Plugins
 - File browser: oil.nvim
 - File picker: fzf-lua
 - Git: fugitive.vim
