@@ -38,7 +38,7 @@ git config --global init.defaultBranch main
 4. Generate and add a new SSH key to your Github account using [this handy guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 5. Clone this repository *in your home directory*:
 ```sh
-# inside ~
+# inside ~, run:
 git clone git@github.com:maualvm/dotfiles.git
 ```
 
