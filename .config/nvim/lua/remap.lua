@@ -9,3 +9,14 @@ vim.keymap.set("v", "<leader>y", '"+y')      -- Copy to system clipboard in visu
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")      -- Move down half a page and center cursor
 vim.keymap.set("n", "<C-u>", "<C-u>zz")      -- Move up half a page and center cursor
+
+-- LSP related keymaps
+-- See `:help vim.diagnostic.*` for documentation on any of the below functions
+vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+vim.keymap.set("n", "]d", function()
+  vim.diagnostic.jump({ count = 1, float = true })
+end)
+vim.keymap.set("n", "[d", function()
+  vim.diagnostic.jump({ count = -1, float = true })
+end)
