@@ -7,16 +7,40 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-2. Clone this repo into ~/dotfiles
+Once you have followed the instructions and restarted your terminal, run the following command to confirm Homebrew was installed properly:
+```sh
+brew doctor
+```
 
-3. Install all necessary tools using the [`Brewfile`](https://docs.brew.sh/Brew-Bundle-and-Brewfile)
+If everything went well, the above command should output `Your system is ready to brew.`
+
+2. Install git:
+```sh
+brew install git
+```
+
+3. Configure git by following the [First-Time Git Setup guide](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+4. Generate and add a new SSH key to your Github account using [this handy guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+5. Clone this repository *in your home directory*:
+```sh
+# inside ~
+git clone git@github.com:maualvm/dotfiles.git
+```
+
+6. `cd` into the cloned repository.
+```sh
+# inside ~
+cd dotfiles
+```
+
+7. Install all necessary tools using the included [`Brewfile`](https://docs.brew.sh/Brew-Bundle-and-Brewfile) by running:
 ```sh
 brew bundle
 ```
 
-4. Make a symlink to this folder using GNU Stow:
+8. Make a symlink to this folder using GNU Stow:
 ```sh
-# In ~/dotfiles run:
+# inside ~/dotfiles, run:
 stow .
 ```
 
