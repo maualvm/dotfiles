@@ -22,7 +22,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
+-- Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = " "      -- Set leader key to space
 vim.g.maplocalleader = " " -- Set local leader key to space (for buffer-local mappings)
 
