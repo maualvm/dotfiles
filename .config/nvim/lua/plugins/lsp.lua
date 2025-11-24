@@ -15,6 +15,7 @@ return {
 
           -- Buffer local mappings.
           -- See `:help vim.lsp.*` for documentation on any of the below functions
+          -- Note: maybe not all of these are needed as buffer local, might be fine as global (remap.lua)
           local opts = { buffer = ev.buf }
           vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
           vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
@@ -25,9 +26,6 @@ return {
           vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
           vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
           vim.keymap.set("n", "gr", ":FzfLua lsp_references<CR>", opts)
-          vim.keymap.set("n", "<leader>f", function()
-            vim.lsp.buf.format { async = true }
-          end, opts)
         end,
       })
     end,
