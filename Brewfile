@@ -1,5 +1,5 @@
-tap "jandedobbeleer/oh-my-posh"
-tap "nikitabobko/tap"
+tap "jandedobbeleer/oh-my-posh", trusted: true
+tap "nikitabobko/tap", trusted: true
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Distributed revision control system
@@ -17,3 +17,5 @@ cask "brave-browser"
 cask "font-jetbrains-mono"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
+# Blazing fast terminal file manager written in Rust, based on async I/O
+brew "yazi"
