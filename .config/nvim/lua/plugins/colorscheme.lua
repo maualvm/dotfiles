@@ -1,9 +1,8 @@
 return {
-  "Mofiqul/vscode.nvim",
+  "navarasu/onedark.nvim",
   priority = 1000,
   opts = {
-    transparent = true,
-    italic_comments = true,
-    italic_inlayhints = true,
-  },
+    transparent = false,
+    style = "darker",
+  }
 }
