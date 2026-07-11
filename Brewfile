@@ -12,8 +12,6 @@ cask "aerospace"
 # Web browser focusing on privacy
 cask "brave-browser"
 cask "font-jetbrains-mono"
-# GPU-accelerated cross-platform terminal emulator and multiplexer
-cask "wezterm"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
 # Cross-shell prompt for astronauts
