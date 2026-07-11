@@ -61,16 +61,3 @@ stow .
 
 9. Install [Mac Mouse Fix](https://macmousefix.com/en/) and [Better Display](https://github.com/waydabber/BetterDisplay) by following the instructions.
 
-You're done!
-
-## Neovim
-
-- Plugin manager: lazy.nvim
-- Colorscheme: catppuccin
-
-### Plugins
-- File browser: oil.nvim
-- File picker: fzf-lua
-- Statusline: lualine.nvim
-- Git: fugitive.vim
-- Autocomplete: nvim-cmp + Github Copilot

@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 local module = {}
 
 function module.apply_to_config(config)
-  config.color_scheme = 'Catppuccin Mocha'
+  config.color_scheme = 'Vs Code Dark+ (Gogh)'
   config.font = wezterm.font('JetBrains Mono NL')
   config.font_size = 14.00
 
@@ -17,8 +17,6 @@ function module.apply_to_config(config)
     bottom = '0.5cell',
   }
 
-  config.window_background_opacity = 0.70
-  config.macos_window_background_blur = 60
 end
 
 return module
