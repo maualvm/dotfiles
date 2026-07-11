@@ -2,25 +2,19 @@
 
 ## Tools used
 
+- Terminal: Ghostty
 - Text editor: Neovim
 - Window manager: Aerospace
-- Terminal: Wezterm
-- Prompt: Oh-my-posh
 - Font: Jetbrains Mono NL
 
 ## Installation
 
-1. Install [Homebrew](https://brew.sh/) by copying the command below and following the instructions.
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
+1. Install [Homebrew](https://brew.sh/).
 
-Once you have followed the instructions and restarted your terminal, run the following command to confirm Homebrew was installed properly:
+Run the following command to confirm Homebrew was installed properly:
 ```sh
 brew doctor
 ```
-
-If everything went well, the above command should output `Your system is ready to brew.`
 
 2. Install git:
 ```sh
@@ -59,5 +53,5 @@ brew bundle
 stow .
 ```
 
-9. Install [Mac Mouse Fix](https://macmousefix.com/en/) and [Better Display](https://github.com/waydabber/BetterDisplay) by following the instructions.
+9. Install [Mac Mouse Fix](https://macmousefix.com/en/) and [Better Display](https://github.com/waydabber/BetterDisplay).
 
