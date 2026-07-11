@@ -1,11 +1,9 @@
 local opts = {
   options = {
-    icons_enabled = true,
     theme = "auto",
-    component_separators = "|",
-    section_separators = { left = "", right = "" },
-    disabled_filetypes = { "alpha" },
-    ignore_focus = {},
+    icons_enabled = true,
+    component_separators = "│",
+    section_separators = "",
     always_divide_middle = true,
     globalstatus = true,
   },
@@ -15,30 +13,20 @@ local opts = {
     winbar = 1000,
   },
   sections = {
-    lualine_a = {
-      { "mode", separator = { left = "" }, right_padding = 2 },
-    },
+    lualine_a = { "mode" },
     lualine_b = { "branch", "diff" },
     lualine_c = {
-      {
-        "filename",
-        path = 1
-      },
-      {
-        "diagnostics",
-        sources = { "nvim_lsp" },
-      }
+      { "filename",    path = 3 },
+      { "diagnostics", sources = { "nvim_lsp" } }
     },
-    lualine_x = { "encoding", "filetype" },
-    lualine_y = { "progress" },
-    lualine_z = {
-      { "location", separator = { right = "" }, left_padding = 2 },
-    }
+    lualine_x = { "lsp_status" },
+    lualine_y = { "encoding", "filetype" },
+    lualine_z = { "location" }
   },
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
-    lualine_c = { "filename" },
+    lualine_c = {},
   },
   tabline = {},
   winbar = {},
