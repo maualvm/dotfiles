@@ -1,4 +1,3 @@
-tap "jandedobbeleer/oh-my-posh", trusted: true
 tap "nikitabobko/tap", trusted: true
 # Command-line fuzzy finder written in Go
 brew "fzf"
@@ -8,8 +7,6 @@ brew "git"
 brew "neovim"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
-# Prompt theme engine for any shell
-brew "jandedobbeleer/oh-my-posh/oh-my-posh"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "aerospace"
 # Web browser focusing on privacy
@@ -19,3 +16,5 @@ cask "font-jetbrains-mono"
 cask "wezterm"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
+# Cross-shell prompt for astronauts
+brew "starship"
