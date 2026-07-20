@@ -11,7 +11,7 @@ xcode-select --install
 2. Install the dotfiles:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/maualvm/dotfiles/main/setup.sh | bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/maualvm/dotfiles/main/setup.sh)"
 ```
 
 ## Setup
