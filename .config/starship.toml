@@ -16,7 +16,7 @@ add_newline = false
 style = "bold green"
 
 [git_branch]
-format = '[\($branch\)]($style)'
+format = '[\($branch\)]($style) '
 style = "bold red"
 
 [git_status]
