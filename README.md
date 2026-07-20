@@ -1,57 +1,19 @@
-# My Dotfiles
-
-## Tools used
-
-- Terminal: Ghostty
-- Text editor: Neovim
-- Window manager: Aerospace
-- Font: Jetbrains Mono NL
+# Dotfiles
 
 ## Installation
 
-1. Install [Homebrew](https://brew.sh/).
+1. Install the Xcode Command Line Tools:
 
-Run the following command to confirm Homebrew was installed properly:
-```sh
-brew doctor
+```bash
+xcode-select --install
 ```
 
-2. Install git:
-```sh
-brew install git
+2. Install and configure the dotfiles through the `setup` script:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/maualvm/dotfiles/main/setup.sh | bash
 ```
 
-3. Configure git by following the [First-Time Git Setup guide](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup):
-```sh
-git config --global user.name "John Doe"
-git config --global user.email johndoe@example.com
-git config --global core.editor nvim
-git config --global init.defaultBranch main
-```
+## Setup
 
-4. Generate and add a new SSH key to your Github account using [this handy guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
-5. Clone this repository *in your home directory*:
-```sh
-# inside ~, run:
-git clone git@github.com:maualvm/dotfiles.git
-```
-
-6. `cd` into the cloned repository:
-```sh
-# inside ~
-cd dotfiles
-```
-
-7. Install all necessary tools using the included [`Brewfile`](https://docs.brew.sh/Brew-Bundle-and-Brewfile) by running:
-```sh
-brew bundle
-```
-
-8. Make a symlink to this folder using GNU Stow:
-```sh
-# inside ~/dotfiles, run:
-stow .
-```
-
-9. Install [Mac Mouse Fix](https://macmousefix.com/en/) and [Better Display](https://github.com/waydabber/BetterDisplay).
-
+The only optional things left to install are [Mac Mouse Fix](https://macmousefix.com/en/) and [Better Display](https://github.com/waydabber/BetterDisplay).
