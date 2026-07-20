@@ -125,5 +125,13 @@ if [ ! -f "$HOME/.ssh/id_ed25519" ]; then
     echo "Switched repository remote to SSH."
 fi
 
+###############################################################################
+# Configure Git commit signing
+###############################################################################
+
+git config --global gpg.format ssh
+git config --global user.signingkey "$HOME/.ssh/id_ed25519.pub"
+git config --global commit.gpgsign true
+
 echo
 echo "Machine setup complete!"
