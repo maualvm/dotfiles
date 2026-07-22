@@ -11,8 +11,10 @@ brew "starship"
 brew "stow"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
+# Better and friendly vi(vim) mode plugin for ZSH
+brew "zsh-vi-mode"
 # AeroSpace is an i3-like tiling window manager for macOS
-cask "nikitabobko/tap/aerospace"
+cask "nikitabobko/tap/aerospace", trusted: true
 # Web browser focusing on privacy
 cask "brave-browser"
 cask "font-jetbrains-mono"
