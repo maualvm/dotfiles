@@ -1,6 +1,13 @@
+# Theme settings
 theme = Atom One Dark
 font-family = "JetBrains Mono NL"
 macos-titlebar-style = "tabs"
+split-divider-color = "#abb2bf"
+
+# Quick terminal settings
+quick-terminal-position = "center"
+quick-terminal-size = "50%,50%"
+quick-terminal-animation-duration = 0.1
 
 # Keybindings
 keybind = cmd+shift+k=goto_split:up
