@@ -136,6 +136,4 @@ git config --global commit.gpgsign true
 echo
 echo "Machine setup complete!"
 echo
-echo "Please restart your terminal session to apply your new shell configuration"
-echo "Alternatively, run:"
-echo "source ~/.zshrc"
+echo "Please restart your terminal to apply the new shell configuration."
