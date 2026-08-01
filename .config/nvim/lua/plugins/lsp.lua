@@ -6,6 +6,7 @@ return {
       require("mason").setup()
       vim.lsp.enable({ "lua_ls" }) -- Add more as needed
       vim.lsp.enable({ "bashls" })
+      vim.lsp.enable({ "gopls" })
 
       -- This enables the following keymaps after an LSP is attached to a buffer
       vim.api.nvim_create_autocmd("LspAttach", {
