@@ -12,7 +12,7 @@ return {
   opts = {
     open_for_directories = true,
     keymaps = {
-      show_help = "<leader>?", -- show help menu
+      show_help = "<leader>?",
     },
   },
 }
