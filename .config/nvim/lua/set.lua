@@ -32,7 +32,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end
 })
 
-vim.opt.complete:append('o')
+vim.opt.complete = { ".", "t", "o" }
 vim.opt.completeopt = { "menu", "menuone", "noselect", "popup" }
 vim.o.pumborder = "rounded"
 
