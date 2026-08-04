@@ -21,6 +21,12 @@ vim.opt.wrap = false        -- Disable line wrapping
 vim.opt.scrolloff = 8       -- Keep 8 lines above and below the cursor when scrolling
 vim.opt.signcolumn = "yes"  -- Always show the signcolumn
 
+vim.opt.list = true
+vim.opt.listchars = {
+  trail = "·",
+  tab = "  ",
+}
+
 -- Autocomplete settings
 vim.o.autocomplete = true
 vim.api.nvim_create_autocmd("LspAttach", {
