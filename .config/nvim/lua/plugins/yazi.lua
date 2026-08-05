@@ -1,7 +1,7 @@
 return {
   "mikavilpas/yazi.nvim",
   version = "*", -- use the latest stable version
-  dependecies = {
+  dependencies = {
     { "nvim-lua/plenary.nvim", lazy = true },
   },
   keys = {
