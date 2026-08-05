@@ -1,11 +1,8 @@
 vim.lsp.enable({ "lua_ls", "gopls", "intelephense" }) -- Add more as needed
 
--- This enables the following keymaps after an LSP is attached to a buffer
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", {}),
   callback = function(ev)
-    -- Buffer local mappings.
-    -- Note: maybe not all of these are needed as buffer local, might be fine as global (remap.lua)
     local opts = { buffer = ev.buf }
     vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
