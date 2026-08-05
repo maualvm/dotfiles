@@ -1,4 +1,4 @@
-vim.lsp.enable({ "lua_ls", "gopls", "bashls" }) -- Add more as needed
+vim.lsp.enable({ "lua_ls", "gopls", "intelephense" }) -- Add more as needed
 
 -- This enables the following keymaps after an LSP is attached to a buffer
 vim.api.nvim_create_autocmd("LspAttach", {
