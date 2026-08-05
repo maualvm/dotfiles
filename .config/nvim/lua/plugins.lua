@@ -14,8 +14,6 @@ require("onedark").setup({
   style = "darker",
 })
 
-require("fzf-lua").setup({})
-
 require("gitsigns").setup({
   current_line_blame = true,
 })
@@ -25,5 +23,4 @@ require("yazi").setup({
   keymaps = { show_help = "<leader>?", },
 })
 
-require("nvim-treesitter").setup()
-require("nvim-treesitter").install({ "php", "ruby", "go" })
+require("nvim-treesitter").install({ "lua", "php", "ruby", "go" })
