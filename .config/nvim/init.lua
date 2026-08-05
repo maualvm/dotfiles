@@ -28,6 +28,7 @@ vim.g.maplocalleader = " " -- Set local leader key to space (for buffer-local ma
 
 require("set")             -- Settings
 require("remap")           -- Keymappings
+require("lsp")
 require("lazy").setup("plugins", {
   defaults = {
     lazy = true
