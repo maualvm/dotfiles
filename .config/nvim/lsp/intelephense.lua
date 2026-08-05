@@ -30,4 +30,13 @@ return {
   cmd = { 'intelephense', '--stdio' },
   filetypes = { 'php' },
   root_markers = { '.git', 'composer.json' },
+  settings = {
+    intelephense = {
+      files = {
+        exclude = {
+          vim.fn.expand("~") .. "/development/Etsyweb/**",
+        },
+      },
+    },
+  }
 }
