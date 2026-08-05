@@ -1,0 +1,38 @@
+{
+  "plugins": {
+    "fzf-lua": {
+      "rev": "d0355a7f30bc0f7a81223ad2d88a019edd91f768",
+      "src": "https://github.com/ibhagwan/fzf-lua"
+    },
+    "gitsigns.nvim": {
+      "rev": "31d6fb2d618bca1482b9f274751ead5f03461408",
+      "src": "https://github.com/lewis6991/gitsigns.nvim"
+    },
+    "nvim-treesitter": {
+      "rev": "3d3321b560a63ff92a8692401f303a5123336b86",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'main'"
+    },
+    "nvim-web-devicons": {
+      "rev": "2ae6958df7ced50baac5035cec0c15799eedfbf7",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "onedark.nvim": {
+      "rev": "df4792accde9db0043121f32628bcf8e645d9aea",
+      "src": "https://github.com/navarasu/onedark.nvim"
+    },
+    "plenary.nvim": {
+      "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
+      "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "vim-fugitive": {
+      "rev": "3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0",
+      "src": "https://github.com/tpope/vim-fugitive"
+    },
+    "yazi.nvim": {
+      "rev": "8d6c25cb4e7c5702d6cd5a263cb36129fa78aa4c",
+      "src": "https://github.com/mikavilpas/yazi.nvim",
+      "version": ">=0.0.0"
+    }
+  }
+}

@@ -1,16 +1,17 @@
-vim.g.loaded_netrw = 1        -- disable netrw
-vim.g.loaded_netrwPlugin = 1  -- disable netrw plugin
-vim.opt.termguicolors = true  -- enable 24-bit RGB colors
-vim.opt.number = true         -- Show line numbers
-vim.opt.relativenumber = true -- Show relative line numbers
-vim.opt.cursorline = true     -- Highlight the current line
-vim.opt.autoindent = true     -- Enable autoindenting
-vim.opt.smartindent = true    -- Enable smart indenting
-vim.opt.winborder = "rounded" -- Use rounded borders for floating windows
-vim.opt.wrap = false          -- Disable line wrapping
-vim.opt.scrolloff = 8         -- Keep 8 lines above and below the cursor when scrolling
-vim.opt.signcolumn = "yes"    -- Always show the signcolumn
-vim.opt.colorcolumn = "124"   -- Show a ruler at 124 characters
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+vim.opt.termguicolors = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.cursorline = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.winborder = "rounded"
+vim.opt.wrap = false
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
+vim.opt.colorcolumn = "124"
 
 vim.opt.list = true
 vim.opt.listchars = {
@@ -58,7 +59,6 @@ vim.opt.wildoptions = { "pum" }
 vim.api.nvim_create_autocmd("LspProgress", {
   callback = function() vim.cmd("redrawstatus") end,
 })
-
 vim.o.laststatus = 3
 vim.o.statusline = table.concat({
   "%F",

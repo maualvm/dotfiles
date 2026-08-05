@@ -14,7 +14,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")                               -- Center 
 
 vim.keymap.set('n', '<leader>ln', ':set rnu!<CR>', { silent = true }) -- Toggle relative line numbers on/off
 
--- LSP related keymaps
+-- LSP
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 vim.keymap.set("n", "]d", function()
@@ -23,3 +23,39 @@ end)
 vim.keymap.set("n", "[d", function()
   vim.diagnostic.jump({ count = -1, float = true })
 end)
+
+-- Fugitive
+vim.keymap.set("n", "<leader>gs", ":G<CR>", { silent = true, desc = "Git status" })
+vim.keymap.set("n", "<leader>gw", ":Gwrite<CR>", { silent = true, desc = "Git write (stage current file)" })
+vim.keymap.set("n", "<leader>gc", ":G commit<CR>", { silent = true, desc = "Git commit" })
+vim.keymap.set("n", "<leader>gp", ":G push<CR>", { silent = true, desc = "Git push" })
+vim.keymap.set("n", "<leader>gl", ":G pull<CR>", { silent = true, desc = "Git pull" })
+vim.keymap.set("n", "<leader>g-", ":G reset HEAD %<CR>", { silent = true, desc = "Git reset HEAD (unstage file)" })
+vim.keymap.set("n", "<leader>gd", ":G checkout -- %<CR>", { silent = true, desc = "Git checkout file (discard changes)" })
+
+-- Gitsigns
+vim.keymap.set("n", "[g", function() require("gitsigns").prev_hunk() end, { silent = true, desc = "Go to previous hunk" })
+vim.keymap.set("n", "]g", function() require("gitsigns").next_hunk() end, { silent = true, desc = "Go to next hunk" })
+vim.keymap.set("n", "<leader>hp", function()
+  require("gitsigns").preview_hunk()
+end, {
+  silent = true,
+  desc = "Preview hunk",
+})
+vim.keymap.set("n", "<leader>hi", function()
+  require("gitsigns").preview_hunk_inline()
+end, {
+  silent = true,
+  desc = "Preview hunk inline",
+})
+
+-- FzfLua
+vim.keymap.set("n", "<leader>fz", ":FzfLua<CR>", { silent = true, desc = "Open FzfLua" })
+vim.keymap.set("n", "<leader>ff", ":FzfLua files<CR>", { silent = true, desc = "Open file picker" })
+vim.keymap.set("n", "<leader>fg", ":FzfLua live_grep<CR>", { silent = true, desc = "Fuzzy/Regex search" })
+vim.keymap.set("n", "<leader>fr", ":FzfLua oldfiles<CR>", { silent = true, desc = "Open recent files" })
+
+-- Yazi
+vim.keymap.set({ "n", "v" }, "<leader>fb", "<cmd>Yazi<CR>", { desc = "Open yazi at the current file" })
+vim.keymap.set({ "n", "v" }, "<leader>cw", "<cmd>Yazi cwd<CR>", { desc = "Open yazi in nvim's current working directory" })
+vim.keymap.set({ "n", "v" }, "<C-Up>", "<cmd>Yazi toggle<CR>", { desc = "Resume the last yazi session" })
