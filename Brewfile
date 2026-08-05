@@ -3,6 +3,8 @@ tap "nikitabobko/tap", trusted: true
 brew "fzf"
 # Distributed revision control system
 brew "git"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Cross-shell prompt for astronauts

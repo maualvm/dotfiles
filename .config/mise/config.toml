@@ -1,0 +1,7 @@
+[tools]
+go = "latest"
+node = "lts"
+tree-sitter = "latest"
+lua-language-server = "latest"
+"go:golang.org/x/tools/gopls" = "latest"
+"npm:intelephense" = "latest"
