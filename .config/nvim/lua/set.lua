@@ -25,7 +25,7 @@ vim.opt.softtabstop = 2  -- <Tab> behaves in 2-column increments
 vim.opt.shiftwidth = 2   -- `>>`, `<<`, `=` and indentation use 2 columns
 vim.opt.expandtab = true -- Use spaces instead of tabs (`\t`)
 
--- Autocomplete settings
+-- Autocomplete
 vim.opt.autocomplete = true
 vim.opt.complete = { ".", "t", "o" }
 vim.opt.completeopt = { "menu", "menuone", "noselect", "popup" }
@@ -39,7 +39,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end
 })
 
--- Cmdline autocomplete settings
+-- Cmdline autocomplete
 vim.api.nvim_create_autocmd("CmdlineChanged", {
   pattern = { ":", "/", "?" },
   callback = function() vim.fn.wildtrigger() end,
