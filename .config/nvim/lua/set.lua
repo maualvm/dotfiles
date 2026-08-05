@@ -7,19 +7,10 @@ vim.opt.cursorline = true     -- Highlight the current line
 vim.opt.autoindent = true     -- Enable autoindenting
 vim.opt.smartindent = true    -- Enable smart indenting
 vim.opt.winborder = "rounded" -- Use rounded borders for floating windows
-
--- Set tab settings
-vim.opt.tabstop = 2         -- Number of spaces that a <Tab> in the file counts for
-vim.opt.softtabstop = 2     -- Like tabstop but only for leading tabs
-vim.opt.shiftwidth = 2      -- Number of spaces that a <Tab> counts for while performing editing operations
-vim.opt.expandtab = true    -- Use spaces instead of tabs
-
-vim.opt.mouse = "a"         -- Enable mouse support
-vim.opt.colorcolumn = "124" -- Show a ruler at 124 characters
-
-vim.opt.wrap = false        -- Disable line wrapping
-vim.opt.scrolloff = 8       -- Keep 8 lines above and below the cursor when scrolling
-vim.opt.signcolumn = "yes"  -- Always show the signcolumn
+vim.opt.wrap = false          -- Disable line wrapping
+vim.opt.scrolloff = 8         -- Keep 8 lines above and below the cursor when scrolling
+vim.opt.signcolumn = "yes"    -- Always show the signcolumn
+vim.opt.colorcolumn = "124"   -- Show a ruler at 124 characters
 
 vim.opt.list = true
 vim.opt.listchars = {
@@ -27,8 +18,17 @@ vim.opt.listchars = {
   tab = "  ",
 }
 
+-- Tabs
+vim.opt.tabstop = 2      -- Width of a tab (`\t`) character
+vim.opt.softtabstop = 2  -- <Tab> behaves in 2-column increments
+vim.opt.shiftwidth = 2   -- `>>`, `<<`, `=` and indentation use 2 columns
+vim.opt.expandtab = true -- Use spaces instead of tabs (`\t`)
+
 -- Autocomplete settings
-vim.o.autocomplete = true
+vim.opt.autocomplete = true
+vim.opt.complete = { ".", "t", "o" }
+vim.opt.completeopt = { "menu", "menuone", "noselect", "popup" }
+vim.opt.pumborder = "rounded"
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
     local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
@@ -38,16 +38,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end
 })
 
-vim.opt.complete = { ".", "t", "o" }
-vim.opt.completeopt = { "menu", "menuone", "noselect", "popup" }
-vim.o.pumborder = "rounded"
-
 -- Cmdline autocomplete settings
 vim.api.nvim_create_autocmd("CmdlineChanged", {
   pattern = { ":", "/", "?" },
   callback = function() vim.fn.wildtrigger() end,
 })
-
 vim.api.nvim_create_autocmd("CmdlineEnter", {
   pattern = { "/", "?" },
   callback = function() vim.opt.pumheight = 8 end,
@@ -59,4 +54,14 @@ vim.api.nvim_create_autocmd("CmdlineLeave", {
 vim.opt.wildmode = { "noselect:lastused", "full" }
 vim.opt.wildoptions = { "pum" }
 
-vim.fn.complete_info({ "selected" })
+-- Statusline
+vim.api.nvim_create_autocmd("LspProgress", {
+  callback = function() vim.cmd("redrawstatus") end,
+})
+
+vim.o.laststatus = 3
+vim.o.statusline = table.concat({
+  "%F",
+  "%h%m%w%r",
+  "%{v:lua.vim.lsp.status()}",
+}, " ")
