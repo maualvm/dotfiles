@@ -18,6 +18,15 @@ vim.keymap.set('n', '<leader>ln', ':set rnu!<CR>', { silent = true, desc = "Togg
 -- LSP
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "Format file" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open diagnostic in floating window" })
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
+vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+vim.keymap.set("n", "K", vim.lsp.buf.hover)
+vim.keymap.set("n", "gi", vim.lsp.buf.implementation)
+vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help)
+vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition)
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+vim.keymap.set({ "n", "x" }, "<leader>ca", vim.lsp.buf.code_action)
+vim.keymap.set("n", "gr", ":FzfLua lsp_references<CR>")
 
 -- Fugitive
 vim.keymap.set("n", "<leader>gs", ":G<CR>", { silent = true, desc = "Git status" })
