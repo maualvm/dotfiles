@@ -60,8 +60,4 @@ vim.api.nvim_create_autocmd("LspProgress", {
   callback = function() vim.cmd("redrawstatus") end,
 })
 vim.o.laststatus = 3
-vim.o.statusline = table.concat({
-  "%F",
-  "%h%m%w%r",
-  "%{v:lua.vim.lsp.status()}",
-}, " ")
+vim.o.statusline = table.concat({ "%F", "%h%m%w%r", "%{v:lua.vim.lsp.status()}" }, " ")
