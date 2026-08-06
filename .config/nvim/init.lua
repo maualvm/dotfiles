@@ -2,8 +2,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 require("set")
+require("plugins")
 require("remap")
 require("lsp")
-require("plugins")
 
 vim.cmd.colorscheme("onedark")

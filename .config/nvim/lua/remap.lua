@@ -1,28 +1,23 @@
 vim.keymap.set("n", "<leader>w", ":write<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")                          -- Move line down
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")                          -- Move line up
-vim.keymap.set("n", "n", "nzzzv")                                     -- Keep cursor centered when searching
-vim.keymap.set("n", "N", "Nzzzv")                                     -- Keep cursor centered when searching
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
 
-vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')                      -- Copy to system clipboard in normal and visual mode
-vim.keymap.set("n", "<leader>Y", '"+Y')                               -- Copy to system clipboard in normal mode (whole line)
+vim.keymap.set("n", "n", "nzzzv", { desc = "Keep cursor centered when searching (next)" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Keep cursor centered when searching (previous)" })
 
-vim.keymap.set("n", "<C-d>", "<C-d>zz")                               -- Center cursor when moving down half a page
-vim.keymap.set("n", "<C-u>", "<C-u>zz")                               -- Center cursor when moving up half a page
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Copy to system clipboard" })
+vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "Copy line to system clipboard" })
 
-vim.keymap.set('n', '<leader>ln', ':set rnu!<CR>', { silent = true }) -- Toggle relative line numbers on/off
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Center cursor when moving down half a page" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Center cursor when moving up half a page" })
+
+vim.keymap.set('n', '<leader>ln', ':set rnu!<CR>', { silent = true, desc = "Toggle relative line numbers on/off" })
 
 -- LSP
-vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
-vim.keymap.set("n", "]d", function()
-  vim.diagnostic.jump({ count = 1, float = true })
-end)
-vim.keymap.set("n", "[d", function()
-  vim.diagnostic.jump({ count = -1, float = true })
-end)
+vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "Format file" })
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open diagnostic in floating window" })
 
 -- Fugitive
 vim.keymap.set("n", "<leader>gs", ":G<CR>", { silent = true, desc = "Git status" })
@@ -34,20 +29,10 @@ vim.keymap.set("n", "<leader>g-", ":G reset HEAD %<CR>", { silent = true, desc =
 vim.keymap.set("n", "<leader>gd", ":G checkout -- %<CR>", { silent = true, desc = "Git checkout file (discard changes)" })
 
 -- Gitsigns
-vim.keymap.set("n", "[g", function() require("gitsigns").prev_hunk() end, { silent = true, desc = "Go to previous hunk" })
-vim.keymap.set("n", "]g", function() require("gitsigns").next_hunk() end, { silent = true, desc = "Go to next hunk" })
-vim.keymap.set("n", "<leader>hp", function()
-  require("gitsigns").preview_hunk()
-end, {
-  silent = true,
-  desc = "Preview hunk",
-})
-vim.keymap.set("n", "<leader>hi", function()
-  require("gitsigns").preview_hunk_inline()
-end, {
-  silent = true,
-  desc = "Preview hunk inline",
-})
+vim.keymap.set("n", "[g", ":Gitsigns prev_hunk<CR>", { silent = true, desc = "Go to previous hunk" })
+vim.keymap.set("n", "]g", ":Gitsigns next_hunk<CR>", { silent = true, desc = "Go to next hunk" })
+vim.keymap.set("n", "<leader>hp", ":Gitsigns preview_hunk<CR>", { silent = true, desc = "Preview hunk" })
+vim.keymap.set("n", "<leader>hi", ":Gitsigns preview_hunk_inline<CR>", { silent = true, desc = "Preview hunk inline" })
 
 -- FzfLua
 vim.keymap.set("n", "<leader>fz", ":FzfLua<CR>", { silent = true, desc = "Open FzfLua" })
@@ -56,6 +41,6 @@ vim.keymap.set("n", "<leader>fg", ":FzfLua live_grep<CR>", { silent = true, desc
 vim.keymap.set("n", "<leader>fr", ":FzfLua oldfiles<CR>", { silent = true, desc = "Open recent files" })
 
 -- Yazi
-vim.keymap.set({ "n", "v" }, "<leader>fb", "<cmd>Yazi<CR>", { desc = "Open yazi at the current file" })
-vim.keymap.set({ "n", "v" }, "<leader>cw", "<cmd>Yazi cwd<CR>", { desc = "Open yazi in nvim's current working directory" })
-vim.keymap.set({ "n", "v" }, "<C-Up>", "<cmd>Yazi toggle<CR>", { desc = "Resume the last yazi session" })
+vim.keymap.set({ "n", "v" }, "<leader>fb", ":Yazi<CR>", { desc = "Open yazi at the current file" })
+vim.keymap.set({ "n", "v" }, "<leader>cw", ":Yazi cwd<CR>", { desc = "Open yazi in nvim's current working directory" })
+vim.keymap.set({ "n", "v" }, "<C-Up>", ":Yazi toggle<CR>", { desc = "Resume the last yazi session" })
