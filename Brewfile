@@ -13,6 +13,8 @@ brew "starship"
 brew "stow"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
 # Better and friendly vi(vim) mode plugin for ZSH
 brew "zsh-vi-mode"
 # AeroSpace is an i3-like tiling window manager for macOS
