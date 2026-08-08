@@ -2,8 +2,8 @@ vim.keymap.set("n", "<leader>w", ":write<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
 
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left buffer" })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to up buffer" })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to down buffer" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to down buffer" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to up buffer" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right buffer" })
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
