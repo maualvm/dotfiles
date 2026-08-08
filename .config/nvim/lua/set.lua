@@ -16,6 +16,7 @@ vim.opt.list = true
 vim.opt.listchars = {
   trail = "·",
   tab = "  ",
+	eol = "¬",
 }
 
 -- Tabs
