@@ -46,6 +46,7 @@ vim.keymap.set("n", "[g", ":Gitsigns prev_hunk<CR>", { silent = true, desc = "Go
 vim.keymap.set("n", "]g", ":Gitsigns next_hunk<CR>", { silent = true, desc = "Go to next hunk" })
 vim.keymap.set("n", "<leader>hp", ":Gitsigns preview_hunk<CR>", { silent = true, desc = "Preview hunk" })
 vim.keymap.set("n", "<leader>hi", ":Gitsigns preview_hunk_inline<CR>", { silent = true, desc = "Preview hunk inline" })
+vim.keymap.set("n", "<leader>hr", ":Gitsigns reset_hunk<CR>", { silent = false, desc = "Reset hunk" })
 
 -- FzfLua
 vim.keymap.set("n", "<leader>fz", ":FzfLua<CR>", { silent = true, desc = "Open FzfLua" })
